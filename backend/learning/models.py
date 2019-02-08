@@ -19,7 +19,8 @@ class Course(models.Model):
 class Lesson(models.Model):
     course = models.ForeignKey(
         Course,
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        related_name="lessons"
     )
 
     name = models.CharField(max_length=500)
@@ -29,9 +30,11 @@ class Lesson(models.Model):
 
 
 class Video(models.Model):
-    video_id = models.CharField(max_length=250)
-    url = models.URLField()
     lesson = models.OneToOneField(
         Lesson,
         on_delete=models.CASCADE,
+        related_name="video"
     )
+
+    video_id = models.CharField(max_length=250)
+    url = models.URLField()
