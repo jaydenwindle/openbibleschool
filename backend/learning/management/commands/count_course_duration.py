@@ -10,8 +10,6 @@ class Command(BaseCommand):
     help = 'Scrape course information from biblicalelearning.org'
 
     def handle(self, *args, **kwargs):
-
-        # Count youtube courses
         youtube_videos = Video.objects.filter(video_id__isnull=False)
         total_duration = None
 
@@ -35,11 +33,3 @@ class Command(BaseCommand):
                 total_duration += duration
 
             print(duration, total_duration)
-        
-        # Count Biblical Training courses
-
-        biblical_training_courses = Course.objects.filter(original_host="http://biblicaltraining.org")
-
-        for course in biblical_training_courses:
-            course_duration = parse_duration(course.data['Time Required'])
-            print(course_duration)
