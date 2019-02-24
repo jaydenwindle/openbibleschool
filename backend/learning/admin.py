@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from learning.models import Author, Course, Lesson, Video, Audio
 
+
 admin.site.register(Author, admin.ModelAdmin)
 admin.site.register(Course, admin.ModelAdmin)
 admin.site.register(Lesson, admin.ModelAdmin)
