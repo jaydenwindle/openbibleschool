@@ -52,7 +52,6 @@ class Video(models.Model):
 
     video_id = models.CharField(max_length=250, null=True, blank=True)
     original_url = models.URLField()
-    duration = models.DurationField(null=True, blank=True)
 
     def __str__(self):
         return self.lesson.name + " (video)"
