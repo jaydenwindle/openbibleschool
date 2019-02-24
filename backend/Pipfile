@@ -11,5 +11,7 @@ python_version = "3.7"
 django-heroku = "*"
 gunicorn = "*"
 django = "*"
+requests = "*"
+selenium = "*"
 
 [dev-packages]
