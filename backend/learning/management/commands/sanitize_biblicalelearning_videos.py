@@ -9,7 +9,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         biblical_elearning_videos = Video.objects.filter(
-            lesson__original_host='http://biblicalelearning.org',
+            lesson__course__original_host='http://biblicalelearning.org',
             video_id__isnull=True
         )
         num_videos = len(biblical_elearning_videos)
