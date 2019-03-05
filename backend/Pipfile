@@ -15,5 +15,8 @@ requests = "*"
 selenium = "*"
 pylint = "*"
 pylint-django = "*"
+graphene-django = "*"
+django-filter = "*"
+django-graphql-jwt = "*"
 
 [dev-packages]
