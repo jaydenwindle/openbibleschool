@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'learning',
+    'graphene_django',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+GRAPHENE = {
+    'SCHEMA': 'open_bible_school.schema.schema',
+}

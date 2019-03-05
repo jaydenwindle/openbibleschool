@@ -13,5 +13,7 @@ gunicorn = "*"
 django = "*"
 requests = "*"
 selenium = "*"
+pylint = "*"
+pylint-django = "*"
 
 [dev-packages]
