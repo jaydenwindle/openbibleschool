@@ -142,12 +142,6 @@ django_heroku.settings(locals())
 
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
-CORS_ORIGIN_WHITELIST = (
-    'localhost:3000',
-)
-CORS_ORIGIN_REGEX_WHITELIST = (
-    'localhost:3000',
-)
 
 GRAPHENE = {
     'SCHEMA': 'open_bible_school.schema.schema',
